@@ -143,11 +143,11 @@ public class PollCommand implements CommandExecutor
                                     	
                                         int time = Integer.parseInt(args[1]) * 1000;
                                         
-                                        if (time < 60) {
+                                        if (time < 60 * 1000) {
                                         	MessageUtil.sendError("Time must be between 60 and 240", sender);
                                         } else {
-                                        	MessageUtil.sendServerRaw(ChatColor.DARK_RED + "••••••••••" + ChatColor.RED + "ATTENTION: A POLL IS STARTING" + ChatColor.DARK_RED + "••••••••••", poll.getServer());
-                                            MessageUtil.sendServerRaw(MessageUtil.getPluginMessage() + ChatColor.AQUA + poll.getName(), poll.getServer());
+                                        	MessageUtil.sendServerRaw(ChatColor.GOLD + "••••••••••" + ChatColor.YELLOW + "ATTENTION: A POLL IS STARTING" + ChatColor.GOLD + "••••••••••", poll.getServer());
+                                            MessageUtil.sendServerRaw(ChatColor.AQUA + poll.getName(), poll.getServer());
                                             MessageUtil.sendServerRaw(poll.getArrayToChat(), poll.getServer());
                                             
                                             Timer t = new Timer();
@@ -155,8 +155,8 @@ public class PollCommand implements CommandExecutor
                                                     @Override
                                                     public void run() {
                                                         
-                                                        MessageUtil.sendServerRaw(MessageUtil.getPluginMessage() + ChatColor.YELLOW + "•••••••••<" + ChatColor.GOLD + "RESULTS TO THE POLL" + ChatColor.YELLOW + ">•••••••••", poll.getServer());
-                                                        MessageUtil.sendServerRaw(MessageUtil.getPluginMessage() + ChatColor.AQUA + poll.getName(), poll.getServer());
+                                                        MessageUtil.sendServerRaw(ChatColor.YELLOW + "•••••••••<" + ChatColor.GOLD + "RESULTS TO THE POLL" + ChatColor.YELLOW + ">•••••••••", poll.getServer());
+                                                        MessageUtil.sendServerRaw(ChatColor.AQUA + poll.getName(), poll.getServer());
                                                         MessageUtil.sendServerRaw(poll.getResultsArray(), poll.getServer());
                                                         
                                                         Date now = new Date();
