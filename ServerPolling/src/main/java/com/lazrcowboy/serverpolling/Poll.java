@@ -11,7 +11,7 @@ public class Poll {
 	/**Poll Object for creating server polls
 	*
 	* @author Kurt (LazrCowboy)
-	* @version 1.0.0
+	* @version 1.0.4
 	* @since 2-3-16
 	*/
 	

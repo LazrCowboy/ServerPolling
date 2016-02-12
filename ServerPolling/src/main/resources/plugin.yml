@@ -1,10 +1,11 @@
 name: ServerPolling
 main: com.lazrcowboy.serverpolling.ServerPolling
-version: 1.0.3
+version: 1.0.4
 commands:
     poll:
         description: Opens the help menu
-        usage: "Usage: /help to open the help menu"
+        usage: "Usage: /help to open the help menu" |
+            - /<command> reload - Reloads Plugin.
 permissions:
     serverpolling.commands.poll:
         description: "Allows access to the special help section (Should be given to everyone) ##NOT USED YET##"
